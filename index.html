@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
         <div class="overlay">
             <div class="nav" id="myHeader">
                 <div class="nav-logo" id="nav-logo">
@@ -24,8 +24,12 @@
                             <li><a class="link">Item</a></li>
                         </ul>
                     </div>
-                </div>  
-           </div> 
+                </div> 
+                
+                <div class="border"></div>
+            </div>
+            
+
            <div class="header-content">
                 <div class="content" data-aos="fade-right">
                     <h1 data-aos-duration="900">Insert text here...</h1>
@@ -68,11 +72,15 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo in id distinctio laborum, tempore voluptas, earum eveniet optio ad repudiandae officiis blanditiis minima porro eum repellat. Velit, amet non.</p>
                         </div>
                     </div>
-    
-                    <button class="btn ReadMore">Read More..</button>
+                </div>
+                     
+                <div class="ReadMore">
+                    <button class="btn ReadMore">Read More..</button> 
                 </div>
             </div>
-    
+        </section>
+        
+        <section>
             <div class="parallax">
                 <div class="card-container overlay">
                     <div data-aos="fade-up" class="card">
@@ -121,21 +129,10 @@
                     </div>
                 </div>
             </div> 
-    
-            <div class="circle-k">
-                <div class="item">
-                    <div class="circle">
-                        <div class="circle-inner">
-                            <div class="circle-front">
-                                <img src="img/globe.jpg" height="50px" width="50px">
-                           </div>
-                           <div class="circle-back">
-                                <label>Website</label>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                
+        </section>
+        
+        <section>
+            <div class="circle-k">      
                 <div class="item">
                     <div class="circle">
                         <div class="circle-inner">
@@ -170,16 +167,21 @@
                                 <img src="img/spotify.png" height="50px" width="50px">
                            </div>
                            <div class="circle-back">
-                                <label>LinkedIn</label>
+                                <label>Spotify</label>
                            </div>
                         </div>
                     </div>
                 </div>
             </div>  
         </section>
-       
-        
     </main> 
+
+    <footer class="footer">
+        <div class="test-container">
+            <label>Footer</label>        
+        </div>
+    </footer>
+
 	<script src="index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

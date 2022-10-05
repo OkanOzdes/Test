@@ -15,7 +15,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
-  top: 0;
 }
 
 .nav {
@@ -23,20 +22,31 @@ header {
   top: 0;
   left: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   height: 100px;
   width: 100%;
   transition: all 0.4s ease;
 }
 
+.border {
+  margin: 18px 200px 0 200px;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.3;
+}
+
 .nav-logo {
   color: white;
   margin: 50px 200px 0 200px;
+  font-size: 25px;
 }
 
 .nav-items {
   color: white;
   margin: 50px 200px 0 0; 
+  font-size: 16px;
  
 }
 
@@ -87,13 +97,9 @@ li:nth-child(4) {
 }
 
 .header-content {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 13%;
-}
-
-.content {
-  
 }
 
 .header-content h1 {
@@ -102,7 +108,6 @@ li:nth-child(4) {
   letter-spacing: 2.5px;
   z-index: -1;
 }
-
 
 .btn {
   color: white;
@@ -136,164 +141,176 @@ button:active {
     width: 100%;
 }
 
+.parallax {
+  background-image: url('img/wind-g1e2f8d43c_1920.jpg');
+  height: 100vh; 
+/*   background-attachment: fixed; */
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.card {
+  width: 400px;
+  height: 400px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-right: 30px;
+  box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.6);
+} 
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-top: 30px;
+} 
+
+.card-body {
+  padding: 30px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.user-review-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 50px;
+}
+
+.user-review {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 600px;
+  margin: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.user-picture {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.user-text {
+  width: 400px;
+}
+
+.ReadMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 50px 0;
+  color: black;
+}
+
 .circle-k {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100px;
+  height: 200px;
+  background-color: #f9f7f7;
 }
-
-.circle {
-    height: 85px;
-    width: 85px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    margin-right: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-  }
-
-  .circle-inner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-    border-radius: 50%;
-    border: 1px solid black;
-    text-decoration: none;
-  }
-
-.circle:hover .circle-inner{
-    transform: rotateY(180deg);
-    height: 100px;
-    width: 100px;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-
-  .circle:hover {
-    height: 100px;
-    width: 100px;
-    box-shadow: 0 0 10px orange;
-    transition: box-shadow 0.5s ease-in-out .4s;
-  }
-
-.circle-front, .circle-back {
-    position: absolute;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
- 
-.circle-front {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  .circle-back {
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
-  } 
-
-  .parallax {
-    background-image: url('img/wind-g1e2f8d43c_1920.jpg');
-    height: 100vh; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   
-  .card-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } 
+.circle {
+  height: 85px;
+  width: 85px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-right: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+  
+.circle-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-decoration: none;
+}
+  
+.circle:hover .circle-inner{
+  transform: rotateY(180deg);
+  height: 100px;
+  width: 100px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+  
+.circle:hover {
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 10px orange;
+  transition: box-shadow 0.5s ease-in-out .4s;
+}
+  
+.circle-front, .circle-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+   
+.circle-front {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+  
+.circle-back {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+} 
 
-  .card {
-    width: 400px;
-    height: 400px;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin-right: 30px;
-    box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.6);
-  } 
-
-   .card-header {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    margin-top: 30px;
-  } 
-
-  .card-body {
-    padding: 30px;
-    color: #fff;
-    line-height: 1.6;
-  }
-
-  .card-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-  }
-
-  .user-review-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-text {
-    display: flex;
-    justify-content: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 50px;
-  }
-
-  .user-review {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    width: 600px;
-    margin: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  }
-
-  .user-picture {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 50%;
-  }
-
-  .user-text {
-    width: 400px;
-  }
-
-  .ReadMore {
-    margin: 50px 0 50px 0;
-    color: black;
-  }
+.footer {
+  height: 400px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
